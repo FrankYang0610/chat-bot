@@ -75,7 +75,7 @@ struct ContentView: View {
                             HStack {
                                 if message.isUser {
                                     Spacer()
-                                    Text(message.text)
+                                    MathMarkdownBubbleView(text: message.text)
                                         .padding()
                                         .background(Color.blue.opacity(0.7))
                                         .foregroundColor(.white)
@@ -91,7 +91,7 @@ struct ContentView: View {
                                             hapticFeedback(style: .light)
                                         }
                                 } else {
-                                    Text(message.text)
+                                    MathMarkdownBubbleView(text: message.text)
                                         .padding()
                                         .background(Color.gray.opacity(0.2))
                                         .foregroundColor(.black)
